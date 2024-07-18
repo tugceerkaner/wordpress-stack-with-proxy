@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: mariadb-container
-        image: tugceerkaner/mariadb:latest
+        image: gcr.io/containerization-429715/mariadb:latest
         ports:
         - containerPort: 3306
         envFrom:

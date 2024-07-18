@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: wordpress-container
-        image: tugceerkaner/wordpress:latest
+        image: gcr.io/containerization-429715/wordpress:latest
         ports:
         - containerPort: 80
         envFrom:
