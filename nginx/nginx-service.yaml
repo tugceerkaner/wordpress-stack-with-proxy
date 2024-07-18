@@ -4,10 +4,10 @@ metadata:
   name: nginx-service
   namespace: nginx
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - port: 8080
+  - port: 80
+    protocol: TCP
     targetPort: 80
-    nodePort: 31500
   selector:
     app: nginx

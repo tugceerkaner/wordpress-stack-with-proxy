@@ -4,7 +4,7 @@ metadata:
   name: wordpress-service
   namespace: wordpress
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
   - port: 80
     protocol: TCP

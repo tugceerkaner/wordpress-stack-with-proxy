@@ -14,7 +14,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: tugceerkaner/nginx:latest
+      - name: nginx-container
+        image: gcr.io/containerization-429715/nginx:latest
         ports:
         - containerPort: 80
