@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress-deployment
+  namespace: wordpress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+      - name: wordpress-container
+        image: gcr.io/containerization-429715/wordpress:latest
+        ports:
+        - containerPort: 80
+        envFrom:
+          - configMapRef:
+              name: wordpress-configmap
+              optional: false
+          - secretRef:
+              name: wordpress-secret
+              optional: false
