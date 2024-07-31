@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx-container
-        image: gcr.io/containerization-429715/nginx:latest
+        image: gcr.io/containerization-429715/nginx:newdeployment
         ports:
         - containerPort: 80
